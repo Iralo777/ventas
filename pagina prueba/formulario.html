@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos</title>
+    <style>
+        /* pruebas */
+    #resultadoComercial {
+        margin-top: 30px; /* Aumenta el margen para separarlo más del formulario */
+        padding: 10px;
+        background-color: #e0f7fa;
+        color: #0d47a1;
+        border: 2px solid #64b5f6;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+        /* Estilos generales del formulario */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+        }
+
+        form {
+            background-color: #bbdefb;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0d47a1;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #0d47a1;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #64b5f6;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #1976d2;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        input[type="text"], input[type="double"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #64b5f6;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"]:hover {
+            background-color: #1565c0;
+        }
+    </style>
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!-- se buscan los iconos en fontawesome-->
+    <script type="module" src="./js/scriptFormulario.js"></script> <!-- Enlace al archivo JavaScript -->
+    <script type="module" src="./js/utilidades.js"></script> <!-- Enlace al archivo JavaScript -->
+
+</head>
+<body>
+    <form id="formulario">
+        <h2>Formulario de Datos</h2>
+<!-- le he creado una funcion a raiz del submit, que una vez activado el submit realizara lo que le mando en el scrptformulario -->
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre"><!-- el name es para acceder al json de ello directamene -->
+
+        <label for="apellido1">Apellido 1</label>
+        <input type="text" id="apellido1" name="apellido1">
+
+        <label for="apellido2">Apellido 2</label>
+        <input type="text" id="apellido2" name="apellido2">
+
+        <label for="comision">Comisión</label>
+        <input type="double" id="comision" name="comision">
+
+        <input type="submit" value="Enviar">    
+    </form>
+
+    <!-- Contenedor para mostrar los resultados -->
+    <div id="resultadoComercial"></div>
+
+
+</body>
+</html>

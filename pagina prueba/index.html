@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <script type="module" src="./js/script.js"></script> <!-- Enlace al archivo JavaScript -->
+    <script type="module" src="./js/utilidades.js"></script> <!-- Enlace al archivo JavaScript -->
+    <style>
+        body {
+            background-color: #f0f0f0; /* Gris claro */
+            font-family: Arial, sans-serif; /* Fuente más legible */
+            margin: 0;
+            padding: 20px;
+        }
+        h3 {
+            color: #89cce2; /* Color del encabezado */
+            margin-bottom: 5px; /* Espacio debajo del encabezado */
+        }
+        table {
+            width: 50%; /* Ancho completo */
+            border-collapse: collapse; /* Colapsar bordes */
+        }
+        th {
+            background-color: #cae6ef; /* Fondo amarillo limón para el encabezado de la tabla */
+            color: black; /* Color del texto del encabezado */
+            padding: 10px; /* Espaciado en celdas del encabezado */
+        }
+        tr {
+            border-bottom: 1px solid #d3d3d3; /* Línea horizontal más oscura que el gris */
+        }
+        td {
+            padding: 10px; /* Espaciado en celdas */
+        }
+
+    </style>
+</head>
+<body>
+<!--■■■■■■■■■■■■■■■■■■■■■✒️TITULO✒️■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<h3>🔍 BUSCADOR COMERCIAL</h3>
+<a href="formulario.html">Crear comercial</a>
+<br>
+<!--■■■■■■■■■■■■■■■■■■■■■🛎️BOTON🛎️■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<button onclick="buscar();">Buscar</button><br>
+<!-- <div id="error">Error</div> -->
+<!--■■■■■■■■■■■■■■■■■■■■■📋TABLA📋■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+            <th>Comisión</th>
+        </tr>
+    </thead>
+    <tbody id="resultados">
+        <!-- Aquí se irían pintando los resultados que salgan -->
+    </tbody>
+</table>
+<hr>
+
+<input type="number" id="identificador"  placeholder="Identificador">
+<button onclick="buscarID()">Buscar</button>
+
+<div id="resultadoComercialID"> </div>
+</body>
+</html>
